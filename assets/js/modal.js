@@ -150,7 +150,6 @@ const convertPokemonToHtml = (pokemon) => {
 function openModal(id) {
     modal.style.display = 'block';
     pokeApi.getPokemonCompleto(id).then((pokemon) => {
-        // debugger
         const newHtml = convertPokemonToHtml(pokemon);
         modal.innerHTML = newHtml;
         const defaultTab = document.getElementById('defaultTab');
@@ -172,7 +171,6 @@ window.onclick = function (event) {
 
 //
 //      TABS
-//
 //
 
 function openTab(evt, tabName) {

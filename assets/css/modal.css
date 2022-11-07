@@ -71,6 +71,10 @@
     display: flex;
 }
 
+ol li::marker {
+    content: '';
+}
+
 .modal-content .types .type {
     font-size: 1rem;
 }
