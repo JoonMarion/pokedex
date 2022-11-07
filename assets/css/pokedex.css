@@ -49,6 +49,11 @@
     flex-direction: column;
 }
 
+.pokemon:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
 .pokemon .number {
     text-align: right;
     font-size: 0.7rem;

@@ -21,114 +21,113 @@ const convertPokemonToHtml = (pokemon) => {
             ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
         </ol>
         </div>
-        <img class="imgPokemon"
-        src="${pokemon.photo}"
-        alt="${pokemon.name}">
+        <img class="imgPokemon" src="${pokemon.photo}" alt="${pokemon.name}">
         <div class="tabsInfo">
-        
         <!-- Tab links -->
-        <div class="tab">
-            <button class="tablinks" onclick="openTab(event, 'About')" id="defaultTab">About</button>
-            <button class="tablinks" onclick="openTab(event, 'Stats')">Base Stats</button>
-            <button class="tablinks" onclick="openTab(event, 'Moves')">Moves</button>
-        </div>
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'About')" id="defaultTab">About</button>
+                <button class="tablinks" onclick="openTab(event, 'Stats')">Base Stats</button>
+                <button class="tablinks" onclick="openTab(event, 'Moves')">Moves</button>
+            </div>
         <!-- Tab content -->
-        <div id="About" class="tabcontent">
-            <ol class="table">
-                <li class="tableHeader">
-                    Species
-                </li>
-                <li>
-                    ${pokemon.species}
-                </li>
-                <li class="tableHeader">
-                    Height
-                </li>
-                <li>
-                    ${pokemon.height}cm
-                </li>
-                <li class="tableHeader">
-                    Weight
-                </li>
-                <li>
-                ${pokemon.weight}Kg
-                </li>
-                <li class="tableHeader">
-                    Abilities
-                </li>
-                <li>
-                ${pokemon.abilities.join(', ')}
-                </li>
-            </ol>
-                <h4>Breeding</h4>
+            <div id="About" class="tabcontent">
                 <ol class="table">
                     <li class="tableHeader">
-                        Egg Groups
+                        Species
                     </li>
                     <li>
-                        ${pokemon.eggGroups.join(', ')}
+                        ${pokemon.species}
                     </li>
                     <li class="tableHeader">
-                        Growth Rate
+                        Height
                     </li>
                     <li>
-                    ${pokemon.growthRate}
+                        ${pokemon.height}cm
                     </li>
                     <li class="tableHeader">
-                        Habitat
+                        Weight
                     </li>
                     <li>
-                    ${pokemon.habitat}
+                        ${pokemon.weight}Kg
                     </li>
-                    
+                    <li class="tableHeader">
+                        Abilities
+                    </li>
+                    <li>
+                        ${pokemon.abilities.join(', ')}
+                    </li>
                 </ol>
-            </div>
+                    <h4>Breeding</h4>
+                    <ol class="table">
+                        <li class="tableHeader">
+                            Egg Groups
+                        </li>
+                        <li>
+                            ${pokemon.eggGroups.join(', ')}
+                        </li>
+                        <li class="tableHeader">
+                            Growth Rate
+                        </li>
+                        <li>
+                            ${pokemon.growthRate}
+                        </li>
+                        <li class="tableHeader">
+                            Habitat
+                        </li>
+                        <li>
+                            ${pokemon.habitat}
+                        </li>
+                    </ol>
+                </div>
             <div id="Stats" class="tabcontent">
                 <ol class="table tableStats">
                     <li class="tableHeader">
                         HP
                     </li>
                     <li class="tableValue">
-                    
-                    ${pokemon.stats['hp']} <progress class="stats" value="${pokemon.stats['hp']}" max="100"></progress>
+                        ${pokemon.stats['hp']} <progress class="stats" value="${
+        pokemon.stats['hp']
+    }" max="100"></progress>
                     </li>
                     <li class="tableHeader">
                         Attack
                     </li>
                     <li class="tableValue">
-                ${pokemon.stats['attack']} <progress class="stats" value="${
-            pokemon.stats['attack']
-        }" max="100"></progress>
+                        ${pokemon.stats['attack']} <progress class="stats" value="${
+        pokemon.stats['attack']
+    }" max="100"></progress>
                     </li>
                     <li class="tableHeader">
                         Defense
                     </li>
                     <li class="tableValue">
-                ${pokemon.stats['defense']} <progress class="stats" value="${
-            pokemon.stats['defense']
-        }" max="100"></progress>
+                        ${pokemon.stats['defense']} <progress class="stats" value="${
+        pokemon.stats['defense']
+    }" max="100"></progress>
                     </li>
                     <li class="tableHeader">
                         Sp. Attack
                     </li>
                     <li class="tableValue" class="tableValue">
                 ${pokemon.stats['special-attack']} <progress class="stats" value="${
-            pokemon.stats['special-attack']
-        }" max="100"></progress>
+        pokemon.stats['special-attack']
+    }" max="100"></progress>
                     </li>
                     <li class="tableHeader">
                         Sp. Defense
                     </li>
                     <li class="tableValue">
                 ${pokemon.stats['special-defense']} <progress class="stats" value="${
-            pokemon.stats['special-defense']
-        }" max="100"></progress>
+        pokemon.stats['special-defense']
+    }" max="100"></progress>
                     </li>
                     <li class="tableHeader">
                         Speed
                     </li>
                     <li class="tableValue">
-                ${pokemon.stats['speed']} <progress class="stats" value="${pokemon.stats['speed']}" max="100"></progress>
+                ${pokemon.stats['speed']} <progress class="stats" value="${
+        pokemon.stats['speed']
+    }" max="100"></progress>
                     </li>
                     <li class="tableHeader">
                         Total
@@ -140,14 +139,10 @@ const convertPokemonToHtml = (pokemon) => {
             </div>
             <div id="Moves" class="tabcontent">
             <ol class="tableMoves">
-            
                 ${pokemon.moves.map((move) => `<li class="type">${move}</li>`).join('')}
-            
             </ol>
-                
             </div>
         </div>
-        
     </div>
   `;
 };
