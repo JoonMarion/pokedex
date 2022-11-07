@@ -1,5 +1,5 @@
 const pokemonList = document.getElementById('pokemonList');
-const loadMoreButton = document.getElementById('loadMoreButton');
+const loadMoreButton = document.getElementById('loadMore');
 
 const maxRecords = 151;
 const limit = 10;
