@@ -1,0 +1,210 @@
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    margin: 3% auto;
+    /* 15% from the top and centered */
+    /* padding: 20px; */
+    border: 1px solid #888;
+    width: 70%;
+    /* Could be more or less, depending on screen size */
+    border-radius: 1rem;
+    background-image: url(../img/background_modal.svg);
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-size: 70%;
+    background-position: 110% 150px;
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    /* float: left; */
+    font-size: 36px;
+    font-weight: 900;
+    padding: 1rem;
+}
+
+.close:hover,
+.close:focus {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.headerPokemon {
+    padding: 1rem;
+}
+
+.headerPokemon .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+
+.headerPokemon .title .number {
+    font-size: 1rem;
+}
+
+.modal-content .types {
+    display: flex;
+}
+
+.modal-content .types .type {
+    font-size: 1rem;
+}
+
+.imgPokemon {
+    margin-left: 25%;
+    margin-bottom: -10%;
+    width: 50%;
+}
+
+.tabsInfo {
+    padding: 30px 20px;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    font-size: 0.9rem;
+    margin-top: 25px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.3s;
+    margin: 0 5px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: white;
+    border-bottom: 2px solid #6c79db;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
+
+.table {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    list-style: none;
+    padding: 0;
+    font-size: 0.825rem;
+    text-transform: capitalize;
+}
+
+.tableMoves {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style: none;
+
+    font-size: 0.9rem;
+    text-transform: capitalize;
+    padding: 0;
+}
+
+.tableMoves .type {
+    padding: 5px;
+}
+.table li {
+    padding: 0.3rem;
+}
+
+.tableValue {
+    text-align: right;
+}
+
+.tableHeader {
+    color: #ccc;
+}
+
+.stats {
+    width: 80%;
+    margin-left: 15px;
+}
+
+@media screen and (min-width: 980px) {
+    .modal-content {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .modal-content {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .modal-content {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .table {
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+
+    .tableMoves {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    .table li {
+        padding: 0.2rem;
+    }
+
+    .tabsInfo {
+        text-align: center;
+    }
+
+    .tab {
+        margin-top: 1rem;
+    }
+    .tab button {
+        padding: 0;
+    }
+}

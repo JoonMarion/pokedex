@@ -17,6 +17,25 @@
     list-style: none;
 }
 
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemons a {
+    height: 100%;
+    width: 100%;
+
+    color: white;
+    text-decoration: none;
+}
+
+.pokemons a:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
 .pokemon {
     color: white;
 
@@ -65,6 +84,6 @@
 }
 
 .pokemon .detail img {
-    max-width: 100%;
+    max-width: 70px;
     height: 70px;
 }

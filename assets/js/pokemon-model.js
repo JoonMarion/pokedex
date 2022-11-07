@@ -4,5 +4,15 @@ class Pokemon {
     type;
     types = [];
     photo;
-
+    abilities = [];
+    height;
+    weight;
+    stats = [];
+    totalStats;
+    speciesUrl;
+    species;
+    growthRate;
+    habitat;
+    eggGroups = [];
+    moves = [];
 }
